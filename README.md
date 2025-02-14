@@ -1,0 +1,1 @@
+# kintone-app-customize-typescript
