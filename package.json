@@ -28,5 +28,8 @@
     "typescript": "^5.7.3",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "crc-32": "https://cdn.sheetjs.com/crc-32-latest/crc-32-latest.tgz"
   }
 }

@@ -3,7 +3,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: {
-    'kintone-typescript-sample': './src/kintone-typescript-sample.ts'
+    'custom-fp-master': './src/custom-fp-master.ts'
   },
 
   output: {
