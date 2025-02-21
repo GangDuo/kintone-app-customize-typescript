@@ -3,7 +3,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: {
-    'custom-fp-master': './src/custom-fp-master.ts'
+    'crc32': './src/crc32.ts'
   },
 
   output: {
@@ -12,7 +12,10 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    fallback: {
+      buffer: require.resolve('buffer')
+    }
   },
 
   module: {
