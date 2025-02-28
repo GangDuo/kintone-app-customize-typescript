@@ -3,7 +3,8 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: {
-    'crc32': './src/crc32.ts'
+    'crc32': './src/crc32.ts',
+    'trace-back-to-grandparents': './src/trace-back-to-grandparents.ts'
   },
 
   output: {
