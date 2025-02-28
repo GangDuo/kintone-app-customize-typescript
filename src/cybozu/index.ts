@@ -1,4 +1,5 @@
 import type { CybozuTypes } from "./types";
+import { User } from "./User";
 
 export namespace Cybozu {
     export type CodeNamePair = {
@@ -16,7 +17,7 @@ export namespace Cybozu {
             const signed = [...footprints];
 
             if(userCode !== null) {
-                const organizationTitles = await Cybozu.User.getOrganizations(userCode);
+                const organizationTitles = await User.getOrganizations(userCode);
                 if (organizationTitles.length === 0 || organizationTitles[0].organization.parentCode === null) {
                     return footprints;
                 }
@@ -43,18 +44,6 @@ export namespace Cybozu {
             if(parentCode === null) return signed;
             return Client.goUpstream(null, parentCode, signed);
         }
-    }
-
-    export class User {
-        getUsers() { }
-
-        static async getOrganizations(userCode: string): Promise<CybozuTypes.OrganizationTitle[]> {
-            const { organizationTitles } = await kintone.api(kintone.api.url("/v1/user/organizations.json"), 'GET', { code: userCode });
-            return organizationTitles;
-        }
-
-        getGroups() { }
-        getServices() { }
     }
 
     export class Organization {
