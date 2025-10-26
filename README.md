@@ -6,6 +6,25 @@
 
 ## kintoneアプリのフィールド情報から型情報を生成する
 
+```sh
+# npx @kintone/dts-gen ... も可能
+# kintone.types.Fields, kintone.types.SavedFieldsがfields.d.tsに生成されます
+npx kintone-dts-gen --base-url https://sample.cybozu.com \
+                            -u username \
+                            -p password \
+                      --app-id 12
+```
+
+オプション|説明
+--|--
+--base-url|カスタマイズする予定のURL
+-u|ユーザー名
+-p|パスワード
+--app-id|カスタマイズするID
+--type-name|出力する型名（未指定の場合Fields）<br>保存ずみの型としてSavedFields、保存前の型としてFieldsが生成* されま。
+--namespace|出力する名前空間（未指定の場合kintone.* types）
+-o|出力するファイル名（未指定の場合fields.d.ts）
+
 [cybozu.dev](https://cybozu.dev/ja/id/9d7aff6319d6de6a821d142d/#generate-information-of-type)
 
 ## ブラウザデバッグ
