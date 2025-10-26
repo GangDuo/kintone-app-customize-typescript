@@ -8,9 +8,7 @@ module.exports = (env, argv) => {
   const config = {
     devtool: isProduction ? false : 'inline-source-map',
     entry: {
-      'sample': './src/sample.ts',
-      'crc32': './src/crc32.ts',
-      'trace-back-to-grandparents': './src/trace-back-to-grandparents.ts'
+      'index': './src/index.ts'
     },
 
     output: {
