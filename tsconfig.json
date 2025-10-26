@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "forceConsistentCasingInFileNames": true,
       "allowSyntheticDefaultImports": true,
       "noFallthroughCasesInSwitch": true,
       "noUnusedParameters": true,
