@@ -27,6 +27,17 @@ npx kintone-dts-gen --base-url https://sample.cybozu.com \
 
 [cybozu.dev](https://cybozu.dev/ja/id/9d7aff6319d6de6a821d142d/#generate-information-of-type)
 
+## kintoneへ適用する
+
+マニフェストファイルを作成し、CSSやJavaScriptファイルをkintoneへアップロード
+
+```sh
+mise install
+mise run
+```
+
+[cybozu.dev](https://cybozu.dev/ja/kintone/sdk/development-environment/customize-uploader/)
+
 ## ブラウザデバッグ
 
 1. 実行中のブラウザに接続する。
