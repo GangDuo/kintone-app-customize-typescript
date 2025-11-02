@@ -1,0 +1,15 @@
+[env]
+KINTONE_BASE_URL = "https://sample.cybozu.com"
+KINTONE_USERNAME = "ログイン名"
+KINTONE_PASSWORD = "パスワード"
+
+[tools]
+"npm:@kintone/customize-uploader" = "latest"
+
+[tasks.init]
+description = "マニフェストファイルの作成"
+run = "kintone-customize-uploader --dest-dir ./dist init"
+
+[tasks.upload]
+description = "カスタマイズの適用"
+run = "kintone-customize-uploader dist/customize-manifest.json"
